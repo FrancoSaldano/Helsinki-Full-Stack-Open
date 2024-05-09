@@ -1,5 +1,5 @@
 import axios from 'axios'
-const BASEURL = 'http://localhost:3011/api/persons'
+const BASEURL = '/api/persons'
 
 const notes = () => {
 

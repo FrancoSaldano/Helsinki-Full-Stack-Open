@@ -10,8 +10,8 @@
 		"preview": "vite preview",
 		"server-notes": "json-server --watch mock/notes.json --port 3000",
 		"server-contacts": "json-server --watch mock/contacts.json --port 3000",
-		"start": "node src/index.js",
-		"saw": "nodemon index.js",
+		"start": "node dist/index.js",
+		"saw": "nodemon dist/index.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"dependencies": {
