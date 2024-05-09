@@ -1,8 +1,15 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Helsinki Full Stack Open
 
-Currently, two official plugins are available:
+Traigo aquí al repositorio mis tareas de cada día, por parte de la universidad de Helsinki un curso Full Stack.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+En este curso aprenderé React, Redux, Node.js, MongoDB, GraphQL y TypeScript de una sola vez.
+
+El enfoque principal es crear aplicaciones de una sola página con ReactJS que usan REST API creadas con Node.js.
+
+En la mismo repo cuento con los ejercicios que van entregando para la puesta en práctica 😎
+
+[fullstackopen.com](https://fullstackopen.com/es/)
+
+
+
