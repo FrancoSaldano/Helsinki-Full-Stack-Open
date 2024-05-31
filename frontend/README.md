@@ -10,7 +10,7 @@ En la mismo repo cuento con los ejercicios que van entregando para la puesta en 
 
 [fullstackopen.com](https://fullstackopen.com/es/)
 
-
+## Actualidad
 //TODO Las dependencias estan mal. Las de backend deberia de estar fuera del front. Por lo que necesitamos otro package.json,comandos,etc e instalar. Meter el front en el back buildeado. Subir el back solamente a Github y que Render use esa carpeta. El proyecto en pausa hasta solucionar esto.
 
 
