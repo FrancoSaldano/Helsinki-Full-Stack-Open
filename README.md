@@ -11,8 +11,12 @@ En la mismo repo cuento con los ejercicios que van entregando para la puesta en 
 Teniendo en cuenta que mucho del contenido está desactualizado, me incursiono en el desafío sin usar create-react-app, en su lugar uso Vite.
 
 [fullstackopen.com](https://fullstackopen.com/es/)
+[link de deploy](https://helsinki-full-stack-open.onrender.com)
 
 ## Actualidad
-//TODO Las dependencias estan mal. Las de backend deberia de estar fuera del front. Por lo que necesitamos otro package.json,comandos,etc e instalar. Meter el front en el back buildeado. Subir el back solamente a Github y que Render use esa carpeta. El proyecto en pausa hasta solucionar esto. SOLUCIONADO
+Resolviendo tareas de capítulo
+Tarea 3.10 OK Falta agregar el método PUT
+Tarea 3.11 OK
+
 
 
