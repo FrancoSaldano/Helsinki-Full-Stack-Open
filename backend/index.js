@@ -3,9 +3,6 @@ import morgan from 'morgan'
 import cors from 'cors'
 const app = express()
 
-
-//TODO Seguir desde "Optimizando el despligue del frontend"
-
 app.use(express.static('dist'))
 app.use(cors())
 app.use(express.json())
@@ -105,6 +102,24 @@ app.post('/api/persons', (request, response) => {
 	console.log(response.body)
 	persons = persons.concat(person)
 	response.json(person)
+})
+app.put('/api/persons/:id', (request, response) => {
+ 	const id = Number(request.params.id)
+ 	const body = request.body
+	
+	console.log(body)
+ 	const personId = persons.findIndex((person) => {
+			person.id === id
+	})
+	
+	const newPerson = {
+		name: body.name,
+		number: body.number || '',
+		personId,
+	}
+	persons = persons.toSpliced(personId, 1, newPerson)
+	
+ 	response.json(newPerson)
 })
 app.delete('/api/persons/:id', (request, response) => {
 	const id = request.params.id
