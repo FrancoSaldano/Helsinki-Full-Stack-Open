@@ -1,5 +1,6 @@
 import axios from 'axios'
 const BASEURL = '/api/persons'
+const BASEJSONPLACE = 'https://jsonplaceholder.typicode.com' 
 
 const notes = () => {
 
@@ -9,7 +10,7 @@ const notes = () => {
       const res = await req
       return res.data
     } catch (error) {
-
+      console.error('bring',error);
     }
   }
 
@@ -19,7 +20,7 @@ const notes = () => {
       const res = await req
       return res.data
     } catch (error) {
-      console.error('createAccion', error)
+      console.error('create', error)
     }
   }
 
@@ -30,41 +31,44 @@ const notes = () => {
       const res = await req
       return res.data
     } catch (error) {
-      return error
+      console.error('eliminate',error) 
     }
   }
 
   const update = async (id, newObject) => {
-    let req = axios.put(`${BASEURL}/${id}`, newObject)
+    let direct = BASEURL.concat(`/${id}`)
+    let req = axios.put(direct, newObject)
     try {
       const res = await req
       return res.data
     } catch (error) {
-      console.log('fail update', error)
+      console.error('update', error)
     }
   }
 
-  const putt = async () =>{
-    let req = axios.put('https://jsonplaceholder.typicode.com/posts/1', {
-      id: 1,
-      title: 'foo',
-      body: 'bar',
-      userId: 1,
-    })
-    try{
-      const res = await req
-      return res.data
-    }catch(error){
-console.log(error);
-    }
-  }
+  // const putt = async () => {
+  //   let postObj = {
+  //     id: 1,
+  //     title: 'foo',
+  //     body: 'bar',
+  //     userId: 1,
+  //   }
+  //   let request = axios.put(`${BASEJSONPLACE}/posts/1`, postObj)
+  //   try {
+  //     const response = await request
+  //     console.log(response.data) 
+  //     return response.data
+
+  //   } catch (error) {
+  //     console.log('error en put axios',error)
+  //   }
+  // }
 
   return {
     bring,
     create,
     eliminate,
-    update,
-    putt
+    update
   }
 }
 

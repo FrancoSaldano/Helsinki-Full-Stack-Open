@@ -60,7 +60,11 @@ const useForm = () => {
   }
   const actionReplace = (oldContacts, newAltName, newAltNumber) => {
     if (confirm(`${newName} ya se encuentra en tu lista de contactos ¿Quieres reemplazar el número anterior por el siguiente?`)) {
-      update(findId(newAltName, oldContacts), { name: newAltName, number: newAltNumber })
+      let idFinded = findId(newAltName, oldContacts)
+      let newItem = { name: newAltName, number: newAltNumber }
+      console.log('id encontrado',idFinded);
+      
+      update(idFinded, newItem)
         .then(res => console.log(res))
         .catch(error => console.log(error))
       bring()
