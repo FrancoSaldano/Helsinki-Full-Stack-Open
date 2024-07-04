@@ -104,23 +104,21 @@ app.post('/api/persons', (request, response) => {
 	response.json(person)
 })
 app.put('/api/persons/:id', (request, response) => {
- 	const id = Number(request.params.id)
- 	const body = request.body
-	
-	console.log(body)
- 	const personId = persons.findIndex((person) => {
-			person.id === id
-	})
-	
+	const id = Number(request.params.id)
+	const recivedData = request.body
+
+	// const personId = persons.findIndex((person) => {
+	// 	person.id === id
+	// })
 	const newPerson = {
-		name: body.name,
-		number: body.number || '',
-		personId,
+		name: recivedData.name,
+		number: recivedData.number || '',
+		id,
 	}
-	persons = persons.toSpliced(personId, 1, newPerson)
-	
- 	response.json(newPerson)
+	// persons = persons.toSpliced(personId, 1, newPerson)
+	response.json(newPerson)
 })
+
 app.delete('/api/persons/:id', (request, response) => {
 	const id = request.params.id
 	persons = persons.filter((person) => person.id != id)
