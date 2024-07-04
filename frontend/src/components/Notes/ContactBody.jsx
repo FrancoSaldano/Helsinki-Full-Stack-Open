@@ -6,6 +6,8 @@ import useFilter from './Hooks/useFilter'
 import useForm from './Hooks/useForm'
 import Notification from './Notification'
 
+import notes from './Hooks/notes'
+const {putt} = notes()
 const ContactBody = () => {
 
   const [showAll, setShowAll] = useState(true)
@@ -21,6 +23,7 @@ const ContactBody = () => {
       <Notification text={MSJ.text} type={MSJ.type} />
       <h3>Contacts</h3>
       <List list={contactFiltered(showAll, contacts, filter)} delDataPerson={actionRemove} />
+      <button onClick={putt}>Probar put</button>
     </div>
   )
 }

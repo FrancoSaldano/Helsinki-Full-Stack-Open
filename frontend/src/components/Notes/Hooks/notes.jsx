@@ -44,11 +44,27 @@ const notes = () => {
     }
   }
 
+  const putt = async () =>{
+    let req = axios.put('https://jsonplaceholder.typicode.com/posts/1', {
+      id: 1,
+      title: 'foo',
+      body: 'bar',
+      userId: 1,
+    })
+    try{
+      const res = await req
+      return res.data
+    }catch(error){
+console.log(error);
+    }
+  }
+
   return {
     bring,
     create,
     eliminate,
-    update
+    update,
+    putt
   }
 }
 

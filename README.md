@@ -14,11 +14,19 @@ Teniendo en cuenta que mucho del contenido está desactualizado, me incursiono e
 [link de deploy](https://helsinki-full-stack-open.onrender.com)
 
 ## Actualidad
+
 Resolviendo tareas de capítulo
 Tarea 3.10 OK Falta agregar el método PUT
 Tarea 3.11 OK
 
-##
+## logrado
 
+Usar el put del JSONPlaceholder de express, para eso
+tenes que saber traer el body de la peticion, returnar eso
+desde express, recibirla con axios y pasarla a la consola.
 
+## Ahora queda
 
+Tener que poder adaptar la lógica a la modificación del objeto y
+actualizar la lista a la lista nueva. Por ahora ya pude llevar la info
+al useForm. Queda solo poder entender como actualizar la lista.
